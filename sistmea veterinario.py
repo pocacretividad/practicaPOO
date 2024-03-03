@@ -239,7 +239,7 @@ def main():
                     else:
                         print("el medicamento ingresado no está recetado para esta mascota")
                 else:
-                    print("La historia clínica ingresada no corresponde con ninguna mascota en el sistema, intente de nuevo")
+                    print("La historia clínica ingresada no corresponde con ninguna mascota en el sistema")
 
         elif menu==7:
             print("Usted ha salido del sistema de servicio de hospitalización...")
