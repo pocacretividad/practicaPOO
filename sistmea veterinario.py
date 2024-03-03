@@ -126,7 +126,7 @@ class SistemaV:
         return False
 
 def main():
-    servicio_hospitalario = SistemaV() 
+    servicio_hospitalario = SistemaV()  #servicio hospitalario se creó como un objeto sistema
     #se añadio la opción de eliminar un medicamento
     while True:
         menu=int(input('''\nIngrese una opción: 
@@ -175,19 +175,19 @@ def main():
                             break
                     
                     dosis = int(input("Ingrese la dosis: "))
-                    medicamento = Medicamento()
+                    medicamento = Medicamento() #se creo el objeto medicamento, el cual adquierirá estos atributos
                     medicamento.asignarNombre(nombre_medicamento)
                     medicamento.asignarDosis(dosis)
                     lista_med.append(medicamento)
 
-                mascota = Mascota()
+                mascota = Mascota() #se creó el objeto mascota , adquirirá estos atributos
                 mascota.asignarNombre(nombre)
                 mascota.asignarHistoria(historia)
                 mascota.asignarPeso(peso)
                 mascota.asignarTipo(tipo)
                 mascota.asignarFecha(fecha.strftime('%d/%m/%Y'))
                 mascota.asignarLista_Medicamentos(lista_med)
-                servicio_hospitalario.ingresarMascota(mascota)
+                servicio_hospitalario.ingresarMascota(mascota) #encapsulamiento
                 
             else:
                 print("Ya existe la mascota con el número de historia clínica")
