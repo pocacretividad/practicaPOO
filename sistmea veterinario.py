@@ -63,7 +63,7 @@ class Mascota:    #acá se hizo lo mismo con la clase mascota(dar atributos y me
     def asignarLista_Medicamentos(self, n):
         self.__lista_medicamentos = n 
     
-    #acá se creó la funcion que permite eliminar los medicamentos, acá ocurre encapsulamiento 
+    #acá se creó la funcion que permite eliminar los medicamentos 
     def eliminarMedicamento(self, nombre_medicamento):
         for medicamento in self.__lista_medicamentos:
             if medicamento.verNombre() == nombre_medicamento:
@@ -77,7 +77,7 @@ class SistemaV:
         #esta es un diccionario que contiene a las mascotas segun su tipo y guardará el resto de sus datos , peso , nombre etc.
         self.__mascotas_por_tipo = {'canino': [], 'felino': []}
         
-        #a partir de este cambio el resto de metodos se reestructuraron para ser usados en diccionarios
+        #a partir de este cambio el resto de metodos suyos (profe) se reestructuraron para ser usados en diccionarios
     
     def verificarExiste(self, historia): 
         for tipo_mascota, lista_mascotas in self.__mascotas_por_tipo.items():
@@ -249,4 +249,6 @@ def main():
             print("Usted ingresó una opción no válida, inténtelo nuevamente...")
 
 if __name__=='__main__':
-    main()
+    main() 
+    
+    #en este ejercicio no hubo herencia(o no la noté) 
