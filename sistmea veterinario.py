@@ -63,7 +63,7 @@ class Mascota:    #acá se hizo lo mismo con la clase mascota(dar atributos y me
     def asignarLista_Medicamentos(self, n):
         self.__lista_medicamentos = n 
     
-    #acá se crea la funcion que permite eliminar los medicamentos
+    #acá se creó la funcion que permite eliminar los medicamentos
     def eliminarMedicamento(self, nombre_medicamento):
         for medicamento in self.__lista_medicamentos:
             if medicamento.verNombre() == nombre_medicamento:
