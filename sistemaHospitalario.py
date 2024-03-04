@@ -64,7 +64,7 @@ def main():
     sis = Sistema() 
     #se creó un menú mas completo al de la version 3 añadiendo las opciones de eliminar y ver datos de un paciente
     while True: #sea buen usuario 
-        print("\menú:")
+        print("menú:")
         print("0 - Salir")
         print("1 - Ingresar un nuevo paciente")
         print("2 - Ver datos de un paciente")
@@ -108,8 +108,12 @@ def main():
                 print("No se encontró un paciente con esa cedula")
         elif opcion == 4:
             sis.verNumeroPacientes()
+        
+        elif opcion== 0:
+            print("saliendo del sistema...")
+            break
         else:
-            break 
+            print("vuelva a intentarlo, opcion no válida")
 
 if __name__ == "__main__":
     main() 
