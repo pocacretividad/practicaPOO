@@ -44,14 +44,14 @@ class Sistema:
     def ingresarPaciente(self, pac):
         self.__lista_pacientes.append(pac)
         return True
-    
+    #nuevo método que permite eliminar un paciente registrado si se encuentra su cédula
     def eliminarPaciente(self, cedula):
         for p in self.__lista_pacientes:
             if cedula == p.verCedula():
                 self.__lista_pacientes.remove(p)
                 return True
         return False
-    
+    #con este se verifica si el paciente esta en el sistema mediante su cédula y la devuelve
     def verDatosPaciente(self, cedula):
         for p in self.__lista_pacientes:
             if cedula == p.verCedula():
@@ -62,7 +62,7 @@ class Sistema:
         print("En el sistema hay: " + str(len(self.__lista_pacientes)) + " pacientes") 
 def main():
     sis = Sistema() 
-    #se creó un menú mas completo al de la version 3 
+    #se creó un menú mas completo al de la version 3 añadiendo las opciones de eliminar y ver datos de un paciente
     while True:
         print("\menú:")
         print("0 - Salir")
@@ -92,7 +92,7 @@ def main():
         elif opcion == 2:
             cedula = int(input("Ingrese la cedula del paciente: ")) 
             paciente = sis.verDatosPaciente(cedula) 
-            if paciente is not None:
+            if paciente is not None:  #si el paciente se encuntra en el sistema se usarán los getters para obetner dicha info
                 print("los datos del paciente son:")
                 print("Nombre: " + paciente.verNombre()) 
                 print("Cedula: " + str(paciente.verCedula())) 
@@ -102,7 +102,7 @@ def main():
                 print("No existe un paciente con esa cedula") 
         elif opcion == 3:
             cedula = int(input("Ingrese la cedula del paciente a eliminar: ")) 
-            if sis.eliminarPaciente(cedula):
+            if sis.eliminarPaciente(cedula):  #se usa el metodo nuevo 
                 print("Paciente eliminado ")
             else:
                 print("No se encontró un paciente con esa cedula")
@@ -113,3 +113,5 @@ def main():
 
 if __name__ == "__main__":
     main() 
+    
+    #en este ejercicio no se presentó herencia ni polimorfismos 
