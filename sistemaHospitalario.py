@@ -1,5 +1,5 @@
-class Paciente:
-    def __init__(self):
+class Paciente:      #creación de la clase 
+    def __init__(self):   #método constructor y sus respectivos atributos
         self.__nombre = '' 
         self.__cedula = 0 
         self.__genero = '' 
@@ -31,10 +31,10 @@ class Paciente:
     def asignarServicio(self, s):
         self.__servicio = s 
         
-class Sistema:    
-    def __init__(self):
-        self.__lista_pacientes = [] 
-        
+class Sistema:    #creacion clase sistema 
+    def __init__(self):  #método constructor
+        self.__lista_pacientes = [] #los atributos de paciente serán guardados en esta lista que es el atributo de sistema
+    #metodos de la clase sistema   
     def verificarPaciente(self, cedula):
         for p in self.__lista_pacientes:
             if cedula == p.verCedula():
