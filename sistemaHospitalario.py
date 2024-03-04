@@ -63,7 +63,7 @@ class Sistema:    #creacion clase sistema
 def main():
     sis = Sistema() 
     #se creó un menú mas completo al de la version 3 añadiendo las opciones de eliminar y ver datos de un paciente
-    while True:
+    while True: #sea buen usuario 
         print("\menú:")
         print("0 - Salir")
         print("1 - Ingresar un nuevo paciente")
